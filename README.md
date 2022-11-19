@@ -1,3 +1,4 @@
 # new-user-signup
 
-Using regular expressions on a new user signup page. 
+Using regular expressions on a new user sign-up page. 
+
