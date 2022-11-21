@@ -25,3 +25,32 @@ input {
     border: 3px solid #ccc;
     outline: none !important;
 }
+
+/* Validation style to give a colored border for input fields */
+/* Class name added when typing as invalid or valid */
+
+input.valid {
+    border-color: green;
+}
+
+input.invalid {
+    border-color: red;
+}
+
+input + p{
+    font-family: arial;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 10px;
+    color: orange;
+    opacity: 0;
+    height: 0;
+    
+}
+
+input.invalid + p{
+opacity: 1;
+height: auto;
+margin-bottom: 15px;
+}
