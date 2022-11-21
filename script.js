@@ -1,6 +1,6 @@
 //Forming regular expressions scripts 
 
-// Two different ways to make regular expressions shown below
+// Two different ways to make regular expressions shown below. First way is better
 //1
 //       var reg = /[a-z]/ig;
 //2
@@ -12,20 +12,20 @@ const inputs = document.querySelectorAll('input');
 
 
 
-//Telephone number regex here
+//pattern regex here
 
 const patterns = {
     telephone: /^\d{11}$/,
-    username: /^[a-z\d]{5-12}$/i,
-    password: /^[\w@-]{8-20}$/,
-    slug: /^[a-z\d-]$/,
+    username: /^[a-z\d]{5,12}$/i,
+    password: /^[\w@-]{8,20}$/,
+    slug: /^[a-z\d-]{8,20}$/,
     email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/
 
 };
 
 //creating validation function. Made up 'validate'
 function validate(field, regex) {
-    if (regex.test(field, value)) {
+    if (regex.test(field.value)) {
         field.className = 'valid';
     } else {
         field.className = 'invalid';
@@ -35,7 +35,7 @@ function validate(field, regex) {
 inputs.forEach((input) => {
     input.addEventListener('keyup', (e) => {
         // console.log(e.target.attribute.name.value);
-        validate(e.target.patterns[e.target.attribute.name.value])
+        validate(e.target,patterns[e.target.attributes.name.value])
     })
 })
 
