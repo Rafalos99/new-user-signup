@@ -37,14 +37,17 @@ input.invalid {
     border-color: red;
 }
 
+
+/* Grabbing the 'p' tag next to each 'input'*/
 input + p{
     font-family: arial;
     font-size: 0.9em;
     font-weight: bold;
     text-align: center;
-    margin: 0 10px;
+    margin: 0px 10px;
     color: orange;
     opacity: 0;
+    /* zero opacity hides the text by 'default' */
     height: 0;
     
 }
